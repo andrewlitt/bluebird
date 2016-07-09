@@ -84,14 +84,14 @@
 
 	var _art2 = _interopRequireDefault(_art);
 
+	var _submit = __webpack_require__(236);
+
+	var _submit2 = _interopRequireDefault(_submit);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	__webpack_require__(236);
+	__webpack_require__(237);
 
-
-	function loadSettings() {
-		// console.log("Awesome");
-	}
 
 	_reactDom2.default.render(_react2.default.createElement(
 		_reactRouter.Router,
@@ -103,6 +103,7 @@
 				_reactRouter.Route,
 				{ path: '', component: _dashboard2.default },
 				_react2.default.createElement(_reactRouter.IndexRoute, { component: _home2.default }),
+				_react2.default.createElement(_reactRouter.Route, { path: 'submit', component: _submit2.default }),
 				_react2.default.createElement(_reactRouter.Route, { path: 'about', component: _about2.default }),
 				_react2.default.createElement(_reactRouter.Route, { path: 'stories', component: _stories2.default }),
 				_react2.default.createElement(_reactRouter.Route, { path: 'poetry', component: _poetry2.default }),
@@ -26013,9 +26014,32 @@
 	        'div',
 	        { className: 'home_container' },
 	        _react2.default.createElement(
-	          'h1',
-	          null,
-	          'bluebird.'
+	          'div',
+	          { className: 'textBox' },
+	          _react2.default.createElement(
+	            'h1',
+	            null,
+	            ' What is bluebird?'
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            ' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut iaculis lacus id massa viverra condimentum. Sed non volutpat orci, et mollis lorem. Nam ac mollis orci. Pellentesque accumsan a leo in suscipit. Donec sem est, faucibus sed sem vitae, volutpat elementum mauris. Aenean varius nunc augue, at consequat lacus sollicitudin ac. Morbi mattis lorem id augue tempus, non vestibulum odio lobortis.Nullam efficitur neque diam, id placerat libero egestas in. Ut scelerisque efficitur nisl, quis ornare lorem lacinia eu. Quisque eu feugiat lectus, et consectetur mauris. Proin non luctus orci. Praesent ex est, mattis in pellentesque eget, sodales a metus'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'submit' },
+	          _react2.default.createElement(
+	            'h1',
+	            null,
+	            'Submissions'
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            ' Coming soon, because apparently creating an email submission thin is kinda hard and Andrew is not a total wizard.'
+	          )
 	        )
 	      );
 	    }
@@ -26076,63 +26100,7 @@
 	          { className: 'logo' },
 	          'bluebird.'
 	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'navigation' },
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'navBar' },
-	            _react2.default.createElement(
-	              'ul',
-	              null,
-	              _react2.default.createElement(
-	                'li',
-	                null,
-	                _react2.default.createElement(
-	                  _reactRouter.Link,
-	                  { to: '' },
-	                  'Home'
-	                )
-	              ),
-	              _react2.default.createElement(
-	                'li',
-	                null,
-	                _react2.default.createElement(
-	                  _reactRouter.Link,
-	                  { to: '/about' },
-	                  'About'
-	                )
-	              ),
-	              _react2.default.createElement(
-	                'li',
-	                null,
-	                _react2.default.createElement(
-	                  _reactRouter.Link,
-	                  { to: '/stories' },
-	                  'Short Stories'
-	                )
-	              ),
-	              _react2.default.createElement(
-	                'li',
-	                null,
-	                _react2.default.createElement(
-	                  _reactRouter.Link,
-	                  { to: '/poetry' },
-	                  'Poetry'
-	                )
-	              ),
-	              _react2.default.createElement(
-	                'li',
-	                null,
-	                _react2.default.createElement(
-	                  _reactRouter.Link,
-	                  { to: '/art' },
-	                  'Visual Art'
-	                )
-	              )
-	            )
-	          )
-	        ),
+	        _react2.default.createElement('div', { className: 'blueStripe' }),
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'content_container' },
@@ -26371,13 +26339,68 @@
 /* 236 */
 /***/ function(module, exports, __webpack_require__) {
 
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(168);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Submit = function (_React$Component) {
+	  _inherits(Submit, _React$Component);
+
+	  function Submit(props) {
+	    _classCallCheck(this, Submit);
+
+	    return _possibleConstructorReturn(this, Object.getPrototypeOf(Submit).call(this, props));
+	  }
+
+	  _createClass(Submit, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'Submissions'
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Submit;
+	}(_react2.default.Component);
+
+	exports.default = Submit;
+
+/***/ },
+/* 237 */
+/***/ function(module, exports, __webpack_require__) {
+
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(237);
+	var content = __webpack_require__(238);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(239)(content, {});
+	var update = __webpack_require__(240)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -26394,21 +26417,21 @@
 	}
 
 /***/ },
-/* 237 */
+/* 238 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(238)();
+	exports = module.exports = __webpack_require__(239)();
 	// imports
 	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Gentium+Book+Basic|Open+Sans:400,600,300);", ""]);
 
 	// module
-	exports.push([module.id, ".home_container {\n  height: 100%;\n  width: 100%;\n  display: block;\n}\n\n.container {\n  height: 100%;\n  width: 100%;\n  padding: 0;\n}\n\n.content_container {\n  padding-top: 40px;\n  width: 100%;\n  height: 100%;\n  background-color: white;\n}\n\n.pageHeader .logo {\n  margin: 30px;\n  font-family: 'Gentium Book Basic', serif;\n  font-size: 5.0em;\n  color: #11335d;\n  text-align: center;\n}\n\n.pageHeader .navigation {\n  background-color: #11335d;\n  display: flex;\n  text-align: center;\n  justify-content: center;\n}\n\n.pageHeader .navigation .navBar {\n  width: 60%;\n  height: 100%;\n}\n\n.pageHeader .navigation .navBar a {\n  font-family: 'Myriad Pro', serif;\n  color: #f1f1f1;\n  text-decoration: none;\n}\n\n.pageHeader .navigation .navBar a:hover {\n  color: #eebd31;\n}\n\n.pageHeader .navigation .navBar ul {\n  list-style: none;\n  display: -moz-box;\n  display: -webkit-box;\n  display: box;\n}\n\n.pageHeader .navigation .navBar li {\n  -moz-box-flex: 1;\n  -webkit-box-flex: 1;\n  box-flex: 1;\n  padding-top: 10px;\n  margin: 0px;\n}\n", ""]);
+	exports.push([module.id, ".home_container {\n  height: 100%;\n  width: 50%;\n  margin: auto;\n  display: block;\n  font-family: \"Open Sans\";\n  color: #11335d;\n}\n\n.textBox {\n  font-size: 12pt;\n  margin-top: 60px;\n}\n\n.content_container {\n  padding-top: 40px;\n  width: 100%;\n  height: 100%;\n}\n\n.blueStripe {\n  height: 40px;\n  width: 100%;\n  background-color: #11335d;\n}\n\n.pageHeader {\n  background-color: white;\n}\n\n.pageHeader .logo {\n  margin: 30px;\n  font-family: 'Gentium Book Basic', serif;\n  font-size: 5.0em;\n  color: #11335d;\n  text-align: center;\n}\n\n.pageHeader .navigation {\n  background-color: #11335d;\n  display: flex;\n  text-align: center;\n  justify-content: center;\n}\n\n.pageHeader .navigation .navBar {\n  width: 60%;\n  height: 100%;\n}\n\n.pageHeader .navigation .navBar a {\n  font-family: 'Myriad Pro', serif;\n  color: #f1f1f1;\n  text-decoration: none;\n}\n\n.pageHeader .navigation .navBar a:hover {\n  color: #eebd31;\n}\n\n.pageHeader .navigation .navBar ul {\n  list-style: none;\n  display: -moz-box;\n  display: -webkit-box;\n  display: box;\n}\n\n.pageHeader .navigation .navBar li {\n  -moz-box-flex: 1;\n  -webkit-box-flex: 1;\n  box-flex: 1;\n  padding-top: 10px;\n  margin: 0px;\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 238 */
+/* 239 */
 /***/ function(module, exports) {
 
 	/*
@@ -26464,7 +26487,7 @@
 
 
 /***/ },
-/* 239 */
+/* 240 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
